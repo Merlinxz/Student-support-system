@@ -118,23 +118,26 @@ html {
 /* Responsive adjustments */
 
 @media (max-width: 576px) {
-    .card {
-        padding: 15px;
-    }
-    .form-control {
-        padding-left: 35px;
-    }
-    .icon-input .icon {
-        left: 5px;
-        font-size: 14px;
-    }
-    .toggle-password {
-        right: 5px;
-    }
-    .btn-primary {
-        font-size: 14px;
-    }
     .card-title {
-        font-size: 20px;
+        font-size: 18px; /* smaller font size for mobile */
+        margin-bottom: 10px; /* less space below the title */
+        padding-bottom: 10px; /* less space above the dashed line */
+        line-height: 1.2; /* tighter line height */
+    }
+
+    .form-control {
+        margin-bottom: 10px; /* reduce space between input fields */
+    }
+
+    /* Adjust the padding inside the inputs if they're too spacious */
+    .icon-input .form-control {
+        padding: 8px 40px 8px 30px; /* top right bottom left */
+    }
+
+    /* If there's a specific text element that's too spaced out, adjust its margin and padding */
+    .specific-text-element {
+        margin: 5px 0; /* top and bottom margin */
+        padding: 0; /* no padding */
+        line-height: 1.2; /* tighter line height */
     }
 }
