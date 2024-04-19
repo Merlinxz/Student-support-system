@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+body,
+html {
+    height: 100%;
+    font-family: 'Kanit', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Removed the max-width property to allow for internal Bootstrap responsiveness */
+}
+
+.card-title {
+    font-size: 20px;
+    color: #2a2a2a;
+    /* Assuming you want to use the same color as h1 */
+    font-weight: 600;
+    /* This is optional, adjust the weight as needed */
+    text-transform: uppercase;
+    /* This is optional, to follow the style of h1 */
+    letter-spacing: 2px;
+    /* This is optional, to follow the style of h1 */
+    border-bottom: 3px dashed #808080;
+    /* This will create the dashed line */
+    padding-bottom: 25px;
+    /* This will create spacing between the text and the dashed line */
+    text-align: center;
+    /* Aligns the text to the center */
+    display: inline-block;
+    /* Ensures the underline only takes up as much width as the text */
+    margin-bottom: 20px;
+    /* Adds some spacing below the title for visual separation */
+}
+
+.icon-input {
+    position: relative;
+}
+
+.icon-input .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+    font-size: 16px;
+}
+
+.form-control {
+    padding-left: 40px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.form-check-input {
+    position: relative;
+    width: 1.25em;
+    height: 1.25em;
+    margin-top: 0.3em;
+    vertical-align: top;
+    background-color: #f8f9fa;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 0.25em;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.form-check-label {
+    margin-left: 0.5em;
+    vertical-align: top;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #000000;
+    font-size: 16px;
+}
+
+.toggle-password:hover {
+    color: #007bff;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 18px;
+        /* smaller font size for mobile */
+        margin-bottom: 10px;
+        /* less space below the title */
+        padding-bottom: 10px;
+        /* less space above the dashed line */
+        line-height: 1.2;
+        /* tighter line height */
+    }
+    .form-control {
+        margin-bottom: 10px;
+        /* reduce space between input fields */
+    }
+    /* Adjust the padding inside the inputs if they're too spacious */
+    .icon-input .form-control {
+        padding: 8px 40px 8px 30px;
+        /* top right bottom left */
+    }
+    /* If there's a specific text element that's too spaced out, adjust its margin and padding */
+    .specific-text-element {
+        margin: 5px 0;
+        /* top and bottom margin */
+        padding: 0;
+        /* no padding */
+        line-height: 1.2;
+        /* tighter line height */
+    }
+}
